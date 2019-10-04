@@ -24,11 +24,13 @@ public class Application extends javafx.application.Application {
         FXMLLoader loader= new FXMLLoader(Application.class.getResource("ui/FXMLDocument.fxml"));
         Parent root = (Parent)loader.load();
         
-       
-         Scene scene=new Scene(root);
-        //Set scene in stage and show it.
-        stage.setScene(scene);
-        stage.show();      
+       FXMLDocumentController viewController=
+                    ((FXMLDocumentController)loader.getController());
+            //Set greeting to be used in JavaFX view controller
+            
+        viewController.setStage(stage);
+        viewController.initStage(root);
+              
     }
     public static void main(String[] args) {
         launch(args);

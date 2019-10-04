@@ -6,6 +6,7 @@
 package ejerciciodin2;
 
 
+import ejerciciodin2.ui.FXMLDocumentController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,11 +20,14 @@ public class Application extends javafx.application.Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("ui/FXMLDocument.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
+        //Parent root = FXMLLoader.load(getClass().getResource("ui/FXMLDocument.fxml"));
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("ui/FXMLDocument.fxml"));
+        Parent root=(Parent) loader.load();
+        FXMLDocumentController viewController =((FXMLDocumentController) loader.getController());
+        //Scene scene = new Scene(root);
+        viewController.setStage(stage);
+        viewController.initStage(root);
+        //stage.setScene(scene);
         stage.show();
     }
 

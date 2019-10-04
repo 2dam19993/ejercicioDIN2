@@ -13,16 +13,17 @@
       xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="ejerciciodin2.ui.FXMLDocumentController">
     <children>
-        <TextField fx:id="txtf_nCuenta" layoutX="59.0" layoutY="72.0" prefHeight="25.0" prefWidth="202.0" />
+        
         <Label fx:id="lbl_nCuenta" layoutX="62.0" layoutY="40.0" prefHeight="17.0" prefWidth="202.0" text="Introduce nº de cuenta" />
         <Button fx:id="btn_mostrar" layoutX="297.0" layoutY="72.0" 
                 mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" 
                 text="Mostrar" onAction="#onActionMostrarBuscaCuenta"/>
+        <TextField fx:id="txtf_nCuenta" layoutX="59.0" layoutY="72.0" prefHeight="25.0" prefWidth="202.0" />
         <TableView fx:id="table" layoutX="59.0" layoutY="134.0" prefHeight="323.0" prefWidth="502.0">
             <columns>
-                <TableColumn prefWidth="100.0" text="Cantidad" />
-                <TableColumn prefWidth="100.0" text="Balance" />
                 <TableColumn prefWidth="100.0" text="Fecha" />
+                <TableColumn prefWidth="100.0" text="Balance" />
+                <TableColumn prefWidth="100.0" text="Cantidad" />
                 <TableColumn prefWidth="200.0" text="Descripción" />
             </columns>
             <opaqueInsets>
